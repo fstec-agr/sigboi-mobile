@@ -1,12 +1,11 @@
-- name: Duplicate Issue
-- uses: wow-actions/duplicate-issue@v1.1.0
-  on:
-   issue_comment:
+name: Duplicate Issue
+on:
+  issue_comment:
     types: [created]
-  jobs:
-    run:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: wow-actions/duplicate-issue@v1
-      with:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wow-actions/duplicate-issue@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
