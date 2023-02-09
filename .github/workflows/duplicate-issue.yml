@@ -1,5 +1,5 @@
 name: Duplicate Issue
-uses: wow-actions/duplicate-issue@v1.1.0
+ uses: wow-actions/duplicate-issue@v1.1.0
 on:
  issue_comment:
     types: [created]
