@@ -1,7 +1,12 @@
-- name: Github Issue Copier
-  uses: soichisumi/issue-copy-action@v0.2.0
-with:
-  keyword: "/copy"
-  targetRepository: fstec-agr/sigboi-mobile-frigorifico
-  githubToken: ${{ secrets.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 }}
-  contentOfNewIssue: ''
+- name: Duplicate Issue
+  uses: wow-actions/duplicate-issue@v1.1.0
+on:
+  issue_comment:
+    types: [created]
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wow-actions/duplicate-issue@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
