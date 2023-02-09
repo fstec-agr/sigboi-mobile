@@ -1,0 +1,7 @@
+- name: Github Issue Copier
+  uses: soichisumi/issue-copy-action@v0.2.0
+with:
+  keyword: "/copy"
+  targetRepository: fstec-agr/sigboi-mobile-frigorifico
+  githubToken: ${{ secrets.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 }}
+  contentOfNewIssue: ''
