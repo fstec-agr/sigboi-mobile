@@ -3,7 +3,7 @@ uses: wow-actions/duplicate-issue@v1.1.0
 on:
  issue_comment:
     types: [created]
- jobs:
+jobs:
   run:
     runs-on: ubuntu-latest
     steps:
